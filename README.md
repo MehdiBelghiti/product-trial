@@ -1,3 +1,10 @@
+# Backend  API Test
+- Pour tester l'API back, j'ai rattaché les collections POSTMAN,
+- Tout d'abord, j'ai veillé à faciliter les tests en mettant h2 database
+- concernant le compte admin (i.e. admin@admin.com), une 1ère création est nécessaire via l'endpoint /account
+- juste après, on pourra s'authentifier via /token
+- là, le token se met automatiquement en variable pour le reste des endpoint, afin de faciliter les test
+- N.B. j'ai ajouté des TUs, le coverage à 86%
 # Consignes
 
 - Vous êtes développeur front-end : vous devez réaliser les consignes décrites dans le chapitre [Front-end](#Front-end)
