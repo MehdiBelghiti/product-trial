@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: ecommerce
+  datasource:
+    url: jdbc:h2:mem:ecommerce
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  secret: dWGawIMz/D7MJPhiQcR+EdC57fE5xj8io1+ZEl++oNYFicZX5nxnmRb7vJIFJFahBQTkCXIbjLU9c/Tu2T1YXA==
+  expiration:
+    ms: 86400000

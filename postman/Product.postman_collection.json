@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "f11c7a9a-eed4-4f07-8993-20dc70dbede0",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29346039"
+	},
+	"item": [
+		{
+			"name": "all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzIxOTQyNDcsImV4cCI6MTczMjI4MDY0N30.zsCeo9ERPii74WXdeov1pUp7Z3sNYq_Jx0LgU_4YEORzQR0ZbbykjfYA8OKRNAlFMs-uAKMLdvF7NW0O8G1o6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\" : \"1\",\r\n    \"name\" : \"produit 1\",\r\n    \"description\" : \"description 1\",\r\n    \"image\" : \"base 64 ?\",\r\n    \"category\" : \"categ 1\",\r\n    \"price\" : 29.95,\r\n    \"quantity\" : 5,\r\n    \"internal_reference\" : \"prod_1\",\r\n    \"shell_id\" : 1,\r\n    \"inventory_status\" : \"INSTOCK\",\r\n    \"rating\" : 5\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzIxOTQyNDcsImV4cCI6MTczMjI4MDY0N30.zsCeo9ERPii74WXdeov1pUp7Z3sNYq_Jx0LgU_4YEORzQR0ZbbykjfYA8OKRNAlFMs-uAKMLdvF7NW0O8G1o6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"description\" : \"description 1 updated\",\r\n    \"rating\" : 4\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzIxOTQyNDcsImV4cCI6MTczMjI4MDY0N30.zsCeo9ERPii74WXdeov1pUp7Z3sNYq_Jx0LgU_4YEORzQR0ZbbykjfYA8OKRNAlFMs-uAKMLdvF7NW0O8G1o6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzIxOTQyNDcsImV4cCI6MTczMjI4MDY0N30.zsCeo9ERPii74WXdeov1pUp7Z3sNYq_Jx0LgU_4YEORzQR0ZbbykjfYA8OKRNAlFMs-uAKMLdvF7NW0O8G1o6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/products/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"products",
+						"1"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

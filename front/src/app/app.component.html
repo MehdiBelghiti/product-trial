@@ -1,0 +1,30 @@
+<p-toolbar [style]="{ height: '100px' }">
+    <div class="p-toolbar-group-start">
+        <img src="assets/icons/icon-72x72.png" alt="logo" />
+    </div>
+    <div class="p-toolbar-group-center">
+        {{ title }}
+    </div>
+    <div class="p-toolbar-group-end relative">
+        <button class="p-button p-button-rounded p-button-text relative flex items-center justify-center" (click)="toggleDrawer()">
+            <i class="pi pi-shopping-cart text-2xl cursor-pointer"></i>
+            <span *ngIf="cartItemCount > 0" class="absolute top-0 right-0 text-red-500 font-extrabold text-sm w-5 h-5 flex items-center justify-center">{{ cartItemCount }}</span>
+        </button>
+    </div>
+</p-toolbar>
+<p-splitter 
+    [panelSizes]="[20, 80]" 
+    [style]="{ height: 'calc(100vh - 100px)' }">
+    <ng-template pTemplate>
+        <div class="w-full">
+            <app-panel-menu />
+        </div>
+    </ng-template>
+    <ng-template pTemplate>
+        <div class="w-full app-content">
+            <router-outlet></router-outlet>
+        </div>
+    </ng-template>
+</p-splitter>
+
+<app-cart-drawer [(visible)]="drawerVisible"></app-cart-drawer>
